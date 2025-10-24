@@ -1,0 +1,31 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="40" fill="#050B24"/>
+  <rect width="1200" height="630" rx="40" fill="url(#paint0_linear)"/>
+  <g opacity="0.8" filter="url(#filter0_f)">
+    <ellipse cx="270" cy="141" rx="220" ry="220" fill="#3551FF"/>
+  </g>
+  <g opacity="0.7" filter="url(#filter1_f)">
+    <ellipse cx="990" cy="513" rx="260" ry="220" fill="#5D7CFF"/>
+  </g>
+  <text x="100" y="190" fill="#AEB8FF" font-family="Inter, system-ui" font-size="28" letter-spacing="0.6em" textLength="440">BARSTAR</text>
+  <text x="100" y="290" fill="white" font-family="Inter, system-ui" font-size="80" font-weight="700">Nightlife Intelligence</text>
+  <text x="100" y="360" fill="#C4CCFF" font-family="Inter, system-ui" font-size="32">Gamified loyalty · Vendor analytics · Stripe billing</text>
+  <rect x="100" y="410" width="320" height="4" fill="white" fill-opacity="0.2"/>
+  <text x="100" y="470" fill="#8EA2FF" font-family="Inter, system-ui" font-size="24">https://barstar.ca</text>
+  <defs>
+    <filter id="filter0_f" x="-170" y="-299" width="880" height="880" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="110" result="effect1_foregroundBlur"/>
+    </filter>
+    <filter id="filter1_f" x="520" y="83" width="940" height="860" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="110" result="effect1_foregroundBlur"/>
+    </filter>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#060B2E"/>
+      <stop offset="1" stop-color="#0C142D"/>
+    </linearGradient>
+  </defs>
+</svg>
