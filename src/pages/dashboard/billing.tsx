@@ -1,6 +1,7 @@
 import DashboardLayout from "@/layouts/DashboardLayout";
 import BillingSection from "@/modules/dashboard/sections/BillingSection";
 import PageMeta from "@/components/PageMeta";
+import { requireUserSession } from "@/lib/auth";
 
 const BillingPage = () => (
   <DashboardLayout
@@ -13,3 +14,4 @@ const BillingPage = () => (
 );
 
 export default BillingPage;
+export const getServerSideProps = requireUserSession;

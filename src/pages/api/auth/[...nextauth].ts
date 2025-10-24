@@ -8,11 +8,12 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID ?? "google-client-id",
       clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "google-client-secret"
     }),
-    AppleProvider({
-      clientId: process.env.APPLE_CLIENT_ID ?? "apple-client-id",
-      clientSecret: process.env.APPLE_CLIENT_SECRET ?? "apple-client-secret"
-    })
+    // AppleProvider({
+    //   clientId: process.env.APPLE_CLIENT_ID ?? "apple-client-id",
+    //   clientSecret: process.env.APPLE_CLIENT_SECRET ?? "apple-client-secret"
+    // })
   ],
+  debug: process.env.NODE_ENV === "development",
   secret: process.env.NEXTAUTH_SECRET ?? "replace-me",
   session: {
     strategy: "jwt"

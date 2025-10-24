@@ -30,7 +30,7 @@ const Hero = () => (
           </Button>
         </div>
         <p className="mt-4 text-xs uppercase tracking-[0.4em] text-slate-400">
-          Powered by Stripe &amp; OAuth 2.0 security
+          Powered by cocaine and hookers
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">

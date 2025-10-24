@@ -1,6 +1,7 @@
 import DashboardLayout from "@/layouts/DashboardLayout";
 import CampaignsSection from "@/modules/dashboard/sections/CampaignsSection";
 import PageMeta from "@/components/PageMeta";
+import { requireUserSession } from "@/lib/auth";
 
 const CampaignsPage = () => (
   <DashboardLayout
@@ -13,3 +14,4 @@ const CampaignsPage = () => (
 );
 
 export default CampaignsPage;
+export const getServerSideProps = requireUserSession;

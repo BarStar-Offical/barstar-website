@@ -39,10 +39,10 @@ const Button = ({ variant = "primary", size = "md", className, href, ...props }:
   );
 
   if (href) {
-    return <Link href={href} className={classes} {...props} />;
+    return <Link href={href} className={classes} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)} />;
   }
 
-  return <button className={classes} {...props} />;
+  return <button className={classes} {...(props as ButtonHTMLAttributes<HTMLButtonElement>)} />;
 };
 
 export default Button;

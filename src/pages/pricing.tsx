@@ -13,8 +13,7 @@ const PricingPage = () => (
       <div className="mx-auto flex max-w-4xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8">
         <h1 className="text-4xl font-semibold text-white">Transparent pricing for nightlife teams</h1>
         <p className="text-base text-slate-300">
-          Every plan includes secure authentication, analytics dashboards, and Stripe-powered
-          billing. Scale up with advanced vendor integrations and success support.
+          Every plan includes analytics dashboards. Scale up with advanced vendor integrations and success support.
         </p>
       </div>
     </section>

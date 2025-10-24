@@ -1,34 +1,38 @@
-import { useEffect, useState } from "react";
+import type { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
+import type { Session } from "next-auth";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
-export type UserRole = "venue-admin" | "vendor" | "staff" | "guest";
+export const requireUserSession = async (
+  ctx: GetServerSidePropsContext
+): Promise<GetServerSidePropsResult<{ session: Session }>> => {
+  const session = await getServerSession(ctx.req, ctx.res, authOptions);
 
-export type AuthUser = {
-  id: string;
-  name: string;
-  email: string;
-  role: UserRole;
-  avatarUrl?: string;
+  if (!session) {
+    const callback = encodeURIComponent(ctx.resolvedUrl ?? "/dashboard");
+
+    return {
+      redirect: {
+        destination: `/api/auth/signin?callbackUrl=${callback}`,
+        permanent: false
+      }
+    };
+  }
+
+  return {
+    props: {
+      session
+    }
+  };
 };
 
-export const mockUser: AuthUser = {
-  id: "usr_123",
-  name: "Jordan Lee",
-  email: "jordan@barstar.ca",
-  role: "venue-admin"
-};
+export const getInitials = (value?: string | null) => {
+  if (!value) return "GU";
 
-export const useMockSession = () => {
-  const [user, setUser] = useState<AuthUser | null>(null);
-  const [status, setStatus] = useState<"loading" | "authenticated" | "unauthenticated">("loading");
+  const parts = value.trim().split(/\s+/);
+  if (parts.length === 1) {
+    return parts[0]!.slice(0, 2).toUpperCase();
+  }
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setUser(mockUser);
-      setStatus("authenticated");
-    }, 300);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  return { user, status };
+  return `${parts[0]!.charAt(0)}${parts[parts.length - 1]!.charAt(0)}`.toUpperCase();
 };

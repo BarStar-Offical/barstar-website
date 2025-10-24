@@ -1,6 +1,7 @@
 import DashboardLayout from "@/layouts/DashboardLayout";
 import OverviewSection from "@/modules/dashboard/sections/OverviewSection";
 import PageMeta from "@/components/PageMeta";
+import { requireUserSession } from "@/lib/auth";
 
 const DashboardHome = () => (
   <DashboardLayout
@@ -13,3 +14,4 @@ const DashboardHome = () => (
 );
 
 export default DashboardHome;
+export const getServerSideProps = requireUserSession;

@@ -1,0 +1,4 @@
+October 24 2025
+- get devcontainer working
+- get site to build
+- deployment pipeline

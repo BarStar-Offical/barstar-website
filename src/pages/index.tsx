@@ -1,3 +1,5 @@
+import type { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
+import { getServerSession } from "next-auth";
 import MarketingLayout from "@/layouts/MarketingLayout";
 import Hero from "@/components/Hero";
 import IntegrationStrip from "@/components/IntegrationStrip";
@@ -6,12 +8,13 @@ import Testimonials from "@/components/Testimonials";
 import Callout from "@/components/Callout";
 import OnboardingTimeline from "@/components/OnboardingTimeline";
 import PageMeta from "@/components/PageMeta";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 const HomePage = () => (
   <MarketingLayout>
     <PageMeta />
     <Hero />
-    <IntegrationStrip />
+
     <FeaturesGrid />
     <Testimonials />
     <section className="bg-slate-950 py-20">
@@ -53,3 +56,22 @@ const HomePage = () => (
 );
 
 export default HomePage;
+
+export const getServerSideProps = async (
+  context: GetServerSidePropsContext
+): Promise<GetServerSidePropsResult<Record<string, never>>> => {
+  const session = await getServerSession(context.req, context.res, authOptions);
+
+  if (session) {
+    return {
+      redirect: {
+        destination: "/dashboard",
+        permanent: false
+      }
+    };
+  }
+
+  return {
+    props: {}
+  };
+};

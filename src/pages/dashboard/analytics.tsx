@@ -1,6 +1,7 @@
 import DashboardLayout from "@/layouts/DashboardLayout";
 import AnalyticsSection from "@/modules/dashboard/sections/AnalyticsSection";
 import PageMeta from "@/components/PageMeta";
+import { requireUserSession } from "@/lib/auth";
 
 const AnalyticsPage = () => (
   <DashboardLayout
@@ -13,3 +14,4 @@ const AnalyticsPage = () => (
 );
 
 export default AnalyticsPage;
+export const getServerSideProps = requireUserSession;

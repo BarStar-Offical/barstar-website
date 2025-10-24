@@ -1,39 +1,39 @@
 export const venuePlans = [
   {
     name: "Starter",
-    price: "$299",
-    cadence: "per month",
+    price: "$0",
+    cadence: "forever",
     description: "Best for independent venues launching their first loyalty experiences.",
     features: [
-      "Up to 2 active promotions",
-      "Standard analytics dashboard",
-      "Email & chat support",
-      "Stripe-powered billing"
+      "Visibility in BarStar app",
+      "Basic analytics dashboard",
+      "1 staff seat",
+      "Email support"
     ]
   },
   {
-    name: "Growth",
-    price: "$499",
+    name: "Established Venue",
+    price: "$99",
     cadence: "per month",
-    description: "Multi-room venues that need deeper performance insights and staff access.",
+    description: "Venues that need to have consistent traffic and want to promote more events.",
     features: [
-      "Unlimited promotions & badges",
-      "Advanced cohort analytics",
-      "Up to 10 staff seats",
-      "Priority support & onboarding"
+      "Everything in Starter",
+      "1 Promoted event per month included",
+      "Advanced cohort analytics dashboard",
+      "Unlimited staff seats",
+      "In-person support & onboarding",
+      "Custom branding options",
     ],
     highlighted: true
   },
   {
-    name: "Enterprise",
+    name: "Touring",
     price: "Custom",
     cadence: "for multi-venue groups",
-    description: "Tailored programs for hospitality groups with white-label activation needs.",
+    description: "Tailored solutions for hospitality groups looking to draw crowds to events they manage like concerts and festivals.",
     features: [
+      "Everything in Established Venue",
       "Dedicated success manager",
-      "Custom API & data exports",
-      "Payout reconciliation services",
-      "Integrations with POS & CRM"
     ]
   }
 ];
@@ -41,7 +41,7 @@ export const venuePlans = [
 export const vendorPlans = [
   {
     name: "Ad Slots",
-    price: "from $999",
+    price: "from $199",
     cadence: "per campaign",
     description: "High-visibility placements for beverage and brand partners.",
     features: [

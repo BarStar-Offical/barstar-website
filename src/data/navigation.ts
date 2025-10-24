@@ -8,5 +8,5 @@ export const primaryNav = [
 export const ctaButtons = [
   { label: "Venue Signup", href: "/signup?type=venue" },
   { label: "Vendor Signup", href: "/signup?type=vendor" },
-  { label: "Login", href: "/api/auth/signin", variant: "secondary" as const }
+  { label: "Login", href: "/api/auth/signin?callbackUrl=/dashboard", variant: "secondary" as const }
 ];
