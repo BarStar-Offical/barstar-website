@@ -60,7 +60,7 @@ The public portion remains a marketing hub, while the authenticated section prov
 
 ## 🌐 Deployment & Environment
 
-Deployed via **Vercel** from the `main` branch with environment variables:
+Deployed via **Vercel** from the `master` branch with environment variables:
 
 ```
 NEXT_PUBLIC_API_BASE=https://api.barstar.ca
